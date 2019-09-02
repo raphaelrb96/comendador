@@ -297,6 +297,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_6"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -324,6 +325,7 @@
                             </LinearLayout>
                             <LinearLayout
                                 android:id="@+id/ll_bt_7"
+                                android:visibility="gone"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
                                 android:background="@drawable/background_categoria"
@@ -349,6 +351,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_8"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -375,6 +378,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_9"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -401,6 +405,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_10"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -427,6 +432,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_11"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -453,6 +459,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_12"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -479,6 +486,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_13"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -505,6 +513,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_14"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -531,6 +540,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_15"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -609,6 +619,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
+                                android:visibility="gone"
                                 android:id="@+id/ll_bt_18"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
@@ -635,7 +646,7 @@
                                     android:layout_height="wrap_content" />
                             </LinearLayout>
                             <LinearLayout
-                                android:id="@+id/ll_bt_"
+                                android:id="@+id/ll_bt_19"
                                 android:layout_margin="5dp"
                                 android:orientation="vertical"
                                 android:background="@drawable/background_categoria"
@@ -663,6 +674,7 @@
                         </LinearLayout>
                     </HorizontalScrollView>
                     <LinearLayout
+                        android:visibility="gone"
                         android:id="@+id/ll_bt_mensagem_menu"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="6dp"
@@ -688,6 +700,7 @@
                             android:layout_height="wrap_content" />
                     </LinearLayout>
                     <LinearLayout
+                        android:visibility="gone"
                         android:id="@+id/ll_bt_meu_carrinho_menu"
                         android:layout_marginTop="10dp"
                         android:layout_marginBottom="6dp"

@@ -4,12 +4,14 @@ import android.app.Fragment;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -129,7 +131,8 @@ public class FragmentMain extends Fragment implements AdapterProdutos.ClickProdu
     private TextView tvErro;
     private FrameLayout toolbar;
 
-    private LinearLayout btOfertas, btMedicamentos, btPerfumaria, btSuplementos, btSair, btMensagem, btMinhasCompras;
+    private LinearLayout btOfertas1, btMeuCarrinho, btZap, btSair, btMensagem, btMinhasCompras;
+    private LinearLayout btCelular2, btComputador3, btVideoGame4, btPetshop5, btEletronicos16, btFerramentas17, btDiversos19;
 
     private EditText etpesquisar;
 
@@ -153,13 +156,19 @@ public class FragmentMain extends Fragment implements AdapterProdutos.ClickProdu
         etpesquisar= (EditText) view.findViewById(R.id.et_pesquisar);
         fundo = (ImageView) view.findViewById(R.id.fundo_main);
         containerLogin = (LinearLayout) view.findViewById(R.id.container_login);
-        btMedicamentos = (LinearLayout) view.findViewById(R.id.ll_bt_medicamentos);
-        btSuplementos = (LinearLayout) view.findViewById(R.id.ll_bt_suplemento);
+        btZap = (LinearLayout) view.findViewById(R.id.ll_bt_zap_menu);
         btSair = (LinearLayout) view.findViewById(R.id.ll_bt_sair);
-        btMensagem = (LinearLayout) view.findViewById(R.id.ll_bt_mensagens);
-        btMinhasCompras = (LinearLayout) view.findViewById(R.id.ll_bt_minhas_compras);
-        btPerfumaria = (LinearLayout) view.findViewById(R.id.ll_bt_perfumaria);
-        btOfertas = (LinearLayout) view.findViewById(R.id.ll_bt_ofertas);
+        btMensagem = (LinearLayout) view.findViewById(R.id.ll_bt_mensagem_menu);
+        btMinhasCompras = (LinearLayout) view.findViewById(R.id.ll_bt_minhas_compras_menu);
+        btMeuCarrinho = (LinearLayout) view.findViewById(R.id.ll_bt_meu_carrinho_menu);
+        btOfertas1 = (LinearLayout) view.findViewById(R.id.ll_bt_1);
+        btCelular2 = (LinearLayout) view.findViewById(R.id.ll_bt_2);
+        btComputador3 = (LinearLayout) view.findViewById(R.id.ll_bt_3);
+        btVideoGame4 = (LinearLayout) view.findViewById(R.id.ll_bt_4);
+        btPetshop5 = (LinearLayout) view.findViewById(R.id.ll_bt_5);
+        btEletronicos16 = (LinearLayout) view.findViewById(R.id.ll_bt_16);
+        btFerramentas17 = (LinearLayout) view.findViewById(R.id.ll_bt_17);
+        btDiversos19 = (LinearLayout) view.findViewById(R.id.ll_bt_19);
         containerMenu = (HorizontalScrollView) view.findViewById(R.id.container_menu);
         btPesquisar = (ImageButton) view.findViewById(R.id.bt_pesquisar);
 
@@ -290,6 +299,44 @@ public class FragmentMain extends Fragment implements AdapterProdutos.ClickProdu
             }
         });
 
+        btZap.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent();
+                String urlWhats = "https://api.whatsapp.com/send?phone=+55991933525";
+                try {
+                    PackageManager pm = getActivity().getPackageManager();
+                    pm.getPackageInfo("com.whatsapp", PackageManager.GET_ACTIVITIES);
+                    Intent intent = new Intent(Intent.ACTION_VIEW);
+                    intent.setData(Uri.parse(urlWhats));
+                    startActivity(intent);
+                } catch (PackageManager.NameNotFoundException e) {
+                    e.printStackTrace();
+                }
+
+                //sendIntent.setAction(Intent.ACTION_SEND);
+                //sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+                //sendIntent.setType("text/plain");
+                //sendIntent.setPackage("com.whatsapp");
+                startActivity(sendIntent);
+            }
+        });
+
+        btMeuCarrinho.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (user.isAnonymous()) {
+                    showDialog(1, "Faça login para poder ter seu carrinho de compras");
+                } else if (!isDeviceOnline()) {
+                    showDialog(2, "Baixa conectividade. Verifique sua internet e tente novamente");
+                } else if (ids.size() == 0) {
+                    showDialog(3, "Seu carrinho está vazio");
+                } else {
+                    startActivity(new Intent(getActivity(), CarrinhoActivity.class));
+                }
+            }
+        });
+
         btMinhasCompras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -332,31 +379,59 @@ public class FragmentMain extends Fragment implements AdapterProdutos.ClickProdu
             }
         });
 
-        btOfertas.setOnClickListener(new View.OnClickListener() {
+        btOfertas1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 obterListaDeProdutos(4);
             }
         });
 
-        btPerfumaria.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                obterListaDeProdutos(3);
-            }
-        });
-
-        btSuplementos.setOnClickListener(new View.OnClickListener() {
+        btCelular2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 obterListaDeProdutos(2);
             }
         });
 
-        btMedicamentos.setOnClickListener(new View.OnClickListener() {
+        btComputador3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                obterListaDeProdutos(1);
+                obterListaDeProdutos(3);
+            }
+        });
+
+        btVideoGame4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                obterListaDeProdutos(4);
+            }
+        });
+
+        btPetshop5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                obterListaDeProdutos(5);
+            }
+        });
+
+        btEletronicos16.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                obterListaDeProdutos(16);
+            }
+        });
+
+        btFerramentas17.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                obterListaDeProdutos(17);
+            }
+        });
+
+        btDiversos19.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                obterListaDeProdutos(19);
             }
         });
 
