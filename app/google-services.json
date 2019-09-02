@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "237281954777",
+    "firebase_url": "https://ocapop-69f44.firebaseio.com",
+    "project_id": "ocapop-69f44",
+    "storage_bucket": "ocapop-69f44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237281954777:android:89ee4dc4de2cb8c9",
+        "android_client_info": {
+          "package_name": "com.inc.ocapop"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "237281954777-27v7bv2h1dsajftiv06o9tfscrlbugp5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.inc.ocapop",
+            "certificate_hash": "ef9f3edda61d859ab8baa077ac3083e86ae7bbfe"
+          }
+        },
+        {
+          "client_id": "237281954777-45kb6q3j06k2mejnef0cbfn3jpf46f43.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChVFQRaxdcSprec69cqhvgA6LzQJHh3PU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "237281954777-45kb6q3j06k2mejnef0cbfn3jpf46f43.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

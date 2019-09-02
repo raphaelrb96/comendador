@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Ocapop</string>
+    <string name="facebook_app_id">901271230237180</string>
+    <string name="fb_login_protocol_scheme">fb901271230237180</string>
+    <string name="facebook_application_id" translatable="false">901271230237180</string>
+    <array name="categorias">
+        <item>Ofertas</item>
+        <item>Celular</item>
+        <item>Computador</item>
+        <item>Video games</item>
+        <item>Petshop</item>
+        <item>Esportes</item>
+        <item>Relogios</item>
+        <item>Mulheres</item>
+        <item>Homens</item>
+        <item>Brinquedos</item>
+        <item>Beleza e Saúde</item>
+        <item>Viagens</item>
+        <item>Escola e escritório</item>
+        <item>Crianças</item>
+        <item>Oculos</item>
+        <item>Eletronicos</item>
+        <item>Ferramentas</item>
+        <item>Automovéis</item>
+        <item>Diversos</item>
+    </array>
+</resources>
