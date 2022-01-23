@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.inc.ocapop">
+    package="com.inc.comendador">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,12 +9,59 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_amacompras"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_amacompras"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CartActivity"></activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.inc.comendador.PainelDeAfiliados"></activity>
+        <activity
+            android:name="com.inc.comendador.MeuPerfilActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.inc.comendador.HistoricoRevendasActivity" />
+        <activity android:name="com.inc.comendador.ComissoesActivity" />
+        <activity android:name="com.inc.comendador.ListaDeFaltas" />
+        <activity
+            android:name="com.inc.comendador.ListaRevendaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.inc.comendador.ProdutoRevendaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.inc.comendador.PainelRevendedorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.inc.comendador.CadastroRevendedorActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.inc.comendador.adapter.RevendaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.inc.comendador.SolicitacoesRevendedoresActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.inc.comendador.LoginMainActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.inc.comendador.CartActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
@@ -38,7 +85,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.inc.comendador.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -47,71 +94,71 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EncomendasAdmActivity" />
+        <activity android:name="com.inc.comendador.EncomendasAdmActivity" />
         <activity
-            android:name=".AnalyticsAdmActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/MeuTemaDark" />
-        <activity
-            android:name=".ProdutoDetalheActivity"
+            android:name="com.inc.comendador.AnalyticsAdmActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".FullscreenReceitaActivity"
+            android:name="com.inc.comendador.ProdutoDetalheActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ClienteDetalhesActivity"
+            android:name="com.inc.comendador.FullscreenReceitaActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MeuTemaDark" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ClientesActivity"
+            android:name="com.inc.comendador.ClienteDetalhesActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MeuTemaDark" />
-        <activity android:name=".VendaActivity" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MensagemActivity"
+            android:name="com.inc.comendador.ClientesActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MeuTemaDark" />
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.inc.comendador.VendaActivity" />
         <activity
-            android:name=".MensagemDetalheActivity"
+            android:name="com.inc.comendador.MensagemActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MeuTemaDark" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".CarrinhoActivity"
+            android:name="com.inc.comendador.MensagemDetalheActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.inc.comendador.CarrinhoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MapaCar" />
         <activity
-            android:name=".ScrollingActivity"
+            android:name="com.inc.comendador.ScrollingActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".CadastroDeProdutoActivity"
+            android:name="com.inc.comendador.CadastroDeProdutoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MeuCollapseTolbar" />
         <activity
-            android:name=".AdmActivity"
+            android:name="com.inc.comendador.AdmActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MeuTemaDark" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".InventarioActivity"
+            android:name="com.inc.comendador.InventarioActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MeuTemaDark" />
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ConfirmarCompraActivity"
+            android:name="com.inc.comendador.ConfirmarCompraActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ConclusaoActivity"
+            android:name="com.inc.comendador.ConclusaoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".MinhasComprasActivity"
+            android:name="com.inc.comendador.MinhasComprasActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".CentralComprasActivity"
+            android:name="com.inc.comendador.CentralComprasActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/MeuTemaDark" />
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
@@ -124,7 +171,7 @@
             android:name="com.google.firebase.messaging.default_notification_color"
             android:resource="@color/red" />
 
-        <service android:name=".MyFirebaseMessagingService">
+        <service android:name="com.inc.comendador.MyFirebaseMessagingService">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>

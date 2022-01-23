@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="3dp"
+    android:layout_margin="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_item_produto_cadastro"
+            android:adjustViewBounds="true"
+            android:minWidth="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_gravity="start|top"
+            android:layout_margin="8dp"
+            android:id="@+id/fab_img_cadastro_principal"
+            app:backgroundTint="@color/colorSecondary"
+            android:background="@drawable/ic_star_black_24dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp" />
+
+        <View
+            android:layout_gravity="end|top"
+            android:layout_margin="8dp"
+            android:id="@+id/fab_img_cadastro_delete"
+            app:backgroundTint="@color/colorSecondaryLight"
+            android:background="@drawable/ic_delete_primary_secudary_25dp"
+            android:layout_width="18dp"
+            android:layout_height="18dp" />
+
+        <ProgressBar
+            android:layout_gravity="center"
+            android:id="@+id/pb_foto_list_criacao"
+            android:layout_width="18dp"
+            android:layout_height="18dp"/>
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

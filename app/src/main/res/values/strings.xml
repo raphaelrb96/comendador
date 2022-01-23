@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Ocapop</string>
+    <string name="app_name">Ama Compras</string>
     <string name="facebook_app_id">901271230237180</string>
     <string name="fb_login_protocol_scheme">fb901271230237180</string>
     <string name="facebook_application_id" translatable="false">901271230237180</string>
@@ -24,4 +24,8 @@
         <item>Automovéis</item>
         <item>Diversos</item>
     </array>
+
+    <string name="title_activity_login_main">LoginMainActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>

@@ -7,17 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".MensagemActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:theme="@style/MeuTemaDark"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <androidx.appcompat.widget.Toolbar
-            android:theme="@style/MeuTemaDark"
-            android:id="@+id/toolbar_msg"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"/>
-    </com.google.android.material.appbar.AppBarLayout>
-
     <include layout="@layout/content_mensagem" />
 
 

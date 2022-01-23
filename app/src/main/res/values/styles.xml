@@ -1,12 +1,14 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.MaterialComponents.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryLight</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="actionMenuTextColor">@color/colorSecondaryDark</item>
+        <item name="actionMenuTextColor">@color/colorPrimaryLight</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/colorPrimaryLight</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
 
@@ -33,19 +35,26 @@
 
     <style name="MeuCollapseTolbar" parent="AppTheme.NoActionBar">
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorPrimaryDark">@color/colorSecondaryDark</item>
-        <item name="colorPrimary">@color/colorSecondaryDark</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryLight</item>
+        <item name="colorPrimary">@color/colorPrimaryLight</item>
     </style>
 
-    <style name="MeuTemaDark" parent="AppTheme.NoActionBar">
+    <style name="MeuTemaDark" parent="AppTheme">
         <item name="colorAccent">@color/colorAccent</item>
         <item name="colorPrimaryDark">@color/colorSecondaryDark</item>
         <item name="colorPrimary">@color/colorSecondaryDark</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
     <style name="MeuEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
         <item name="hintTextColor">@color/colorSecondary</item>
         <item name="boxStrokeColor">@color/colorSecondaryLight</item>
+        <item name="helperTextTextColor">@color/colorPrimaryDark</item>
+    </style>
+
+    <style name="MeuEditTextBrancoNovo" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="hintTextColor">@color/colorPrimaryLight</item>
+        <item name="boxStrokeColor">@color/colorPrimaryLight</item>
         <item name="helperTextTextColor">@color/colorPrimaryDark</item>
     </style>
 
@@ -83,6 +92,14 @@
 
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
     </style>
 
 

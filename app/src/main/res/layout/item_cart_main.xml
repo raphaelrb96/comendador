@@ -11,7 +11,7 @@
         android:layout_width="116dp"
         android:layout_height="116dp">
         <ImageView
-            android:id="@+id/imagem_cart"
+            android:id="@+id/imagem_cart_main"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
             android:layout_width="match_parent"
@@ -23,8 +23,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
+            android:id="@+id/tv_nome_cart_main"
             android:textSize="20sp"
-            android:text="AK-66 com 4 gatilhos"
             android:gravity="center|start"
             android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
@@ -34,11 +34,11 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
             <TextView
+                android:id="@+id/tv_total_cart_main"
                 android:layout_marginLeft="16dp"
                 android:textColor="@color/colorSecondaryDark"
                 android:textStyle="bold"
                 android:textSize="24sp"
-                android:text="20,00"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
             <LinearLayout
@@ -57,6 +57,7 @@
                     android:layout_width="25dp"
                     android:layout_height="25dp" />
                 <TextView
+                    android:id="@+id/quantidade_produto_cart_main"
                     android:layout_marginLeft="16dp"
                     android:layout_marginRight="16dp"
                     android:textSize="24sp"

@@ -7,7 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".CentralComprasActivity">
     <com.google.android.material.appbar.AppBarLayout
-        android:theme="@style/MeuTemaDark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.Toolbar
@@ -15,11 +14,10 @@
         android:layout_height="wrap_content">
         <LinearLayout
             android:orientation="horizontal"
-            android:layout_marginTop="24dp"
             android:layout_width="match_parent"
             android:layout_height="56dp">
             <View
-                android:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorSecondaryLight"
                 android:background="@drawable/ic_arrow_back_black_24dp"
                 android:layout_marginRight="8dp"
                 android:layout_gravity="center|start"
@@ -29,7 +27,7 @@
                 android:layout_height="25dp"/>
             <TextView
                 android:textSize="18sp"
-                android:textColor="@color/colorPrimaryLight"
+                android:textColor="@color/colorSecondaryLight"
                 android:layout_gravity="center_vertical"
                 android:text="Vendas"
                 android:layout_width="wrap_content"
@@ -38,7 +36,7 @@
     </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
     <FrameLayout
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="56dp"
         android:background="@color/colorPrimaryLight"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
